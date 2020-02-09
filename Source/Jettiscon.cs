@@ -1,4 +1,6 @@
-﻿
+﻿// https://kerbalspaceprogram.com/api/class_module_fuel_jettison.html
+// ModuleFuelJettiscon
+
 using System;
 using System.Collections.Generic;
 using UnityEngine;

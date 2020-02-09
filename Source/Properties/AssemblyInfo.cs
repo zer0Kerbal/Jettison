@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("Jettison")]
 [assembly: AssemblyDescription("Jettison allows individual resource tanks to be emptied from the right-click menu. For Kerbal Space Program (KSP)")]
 [assembly: AssemblyConfiguration("Release")]
-[assembly: AssemblyCompany("KGEx")]
+[assembly: AssemblyCompany("zer0Kerbal, Biff Space")]
 [assembly: AssemblyProduct("Jettison")]
 [assembly: AssemblyCopyright("GPLv3")]
 [assembly: AssemblyTrademark("")]
