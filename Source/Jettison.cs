@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using KSP;
+using KSP.Localization;
 
 namespace Jettison
 {
@@ -30,7 +31,8 @@ namespace Jettison
             {
                 foreach (BaseEvent ev in Events)
                 {
-                    if (ev.guiName == "Jettison resource")
+                    Log.dbg(ev.GUIName);
+                    if (ev.guiName == "#Jettiscon_PAW") //"Jettison resource")
                     {
                         ev.active = false;
                     }
@@ -40,7 +42,10 @@ namespace Jettison
             }
         }
 
-        [KSPEvent(guiActive = true, guiActiveEditor = false, guiName = "Jettison Resource")]
+        [KSPEvent(
+            guiActive = true, 
+            guiActiveEditor = false, 
+            guiName = "#Jettiscon_PAW")] // Jettison Next Resource
         public void button_JettisonClicked()
         {
             PartResource liquidFuel = null;
@@ -48,6 +53,7 @@ namespace Jettison
 
             foreach (PartResource resource in part.Resources)
             {
+                Log.dbg(resource.resourceName);
                 if (!resource.flowState || resource.resourceName == "ElectricCharge")
                 {
                     continue;
@@ -61,7 +67,9 @@ namespace Jettison
                 {
                     if (resource.amount > 0.01f)
                     {
+                        // Log.dbg((resource.amount);
                         resource.amount = 0f;
+                        //Log.dbg(resource.amount);
                         emptiedSomething = true;
                         continue;
                     }
