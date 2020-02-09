@@ -6,7 +6,7 @@ using KSP;
 
 namespace Jettison
 {
-    public class Jettison : PartModule
+    public class ModuleJettison : PartModule
     {
         public override void OnUpdate()
         {
